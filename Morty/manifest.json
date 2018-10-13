@@ -16,6 +16,16 @@
     "activeTab"
   ],
 
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/morty16.png",
+      "32": "icons/morty32.png",
+      "48": "icons/morty48.png"
+    },
+    "default_title": "Morty",
+    "default_popup": "menu/menu.html"
+  },
+
   "content_scripts": [
     {
       "matches": ["https://*.realtor.ca/Residential/*"],
