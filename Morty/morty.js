@@ -37,11 +37,11 @@ window.onload = function() {
         '        <div class="m_property_dtl_realtor_corporationtype">\n' +
         '        <span id="corporationtype"></span>\n' +
         '        </div>\n' +
-        '        <div class="m_property_dtl_office_logo noPrint">\n' +
+        '        <div id="morty_anchor" class="m_property_dtl_office_logo noPrint">\n' +
         '        <a id="lnkOfficeLogo" href=' + tdUrl +'><img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/eaec155b966f93828bb87eccd6101299" id="imgOfficePhoto" class="m_realtor_dtl_office_img" alt="REALTOR®" title="RE/MAX CORE REALTY INC." style="\n' +
         '    width: 50px;\n' +
         '    "></a>\n' +
-        '    <a  id="morty_anchor" href=' + tdUrl +'><img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/eaec155b966f93828bb87eccd6101299" id="imgOfficePhoto" class="m_realtor_dtl_office_img" alt="REALTOR®" title="RE/MAX CORE REALTY INC." style="\n' +
+        '    <a href=' + tdUrl +'><img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/eaec155b966f93828bb87eccd6101299" id="imgOfficePhoto" class="m_realtor_dtl_office_img" alt="REALTOR®" title="RE/MAX CORE REALTY INC." style="\n' +
         '    width: 50px;\n' +
         '    "></a></div></div>';
     // TODO: refactor
