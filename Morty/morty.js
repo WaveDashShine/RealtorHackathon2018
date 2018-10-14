@@ -50,7 +50,8 @@ window.onload = function() {
 };
 
 function loadMorty(){
-    $("#morty_anchor").append('<img id="morty-head" src="morty48.png" alt="MORTY_FACE" style="height:48px; width:48px">');
+    var icon_url = chrome.extension.getURL("/icons/morty48.png");
+    $("#morty_anchor").append('<img id="morty-head" src="' + icon_url + '" alt="MORTY_FACE" style="height:48px; width:48px">');
     $("head").append('<style>#morty-bubble td:hover{cursor:pointer;}#morty-head:hover{cursor:pointer;}#morty-bubble{position:absolute;overflow:hidden;transition: height linear 0.25s;height:0px;width:225px;background-color:skyblue;}#morty-response{    padding:10px;    position:absolute;    font-size:20px;}#morty-clickable-table{    position:absolute;}#morty-ok-continue{    cursor:pointer;}.morty-blurred{    -webkit-filter: blur(5px);    -moz-filter: blur(5px);    -o-filter: blur(5px);    -ms-filter: blur(5px);    filter: blur(5px);    pointer-events:none;}</style>');
     //add the morty bubble stuff
     $("#morty-head").after(
@@ -128,11 +129,6 @@ function loadMorty(){
         $("#morty-ok-continue").hide();
         $("#morty-response-text").html("");
     })
-    document.getElementsByTagName('head')[0].appendChild('<script' +
-    'src="https://code.jquery.com/jquery-3.3.1.min.js"' +
-    'integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="' + 
-    'crossorigin="anonymous"></script>"');
-    setTimeout(function(){ loadScript();}, 50);
 };
 
 function getInformation(lat, lng, index){
