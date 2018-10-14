@@ -1,7 +1,7 @@
 function loadMorty(){
     //we are good
     console.log("loaded");
-    $("#morty_anchor").html('<img id="morty-head" src="morty48.png">');
+    $("#morty_anchor").html('<img id="morty-head" src="morty48.png alt="MORTY_FACE">');
     $("head").append('<style>#morty-bubble td:hover{cursor:pointer;}#morty-head:hover{cursor:pointer;}#morty-bubble{position:absolute;overflow:hidden;transition: height linear 0.25s;height:0px;width:225px;background-color:skyblue;}#morty-response{    padding:10px;    position:absolute;    font-size:20px;}#morty-clickable-table{    position:absolute;}#morty-ok-continue{    cursor:pointer;}.morty-blurred{    -webkit-filter: blur(5px);    -moz-filter: blur(5px);    -o-filter: blur(5px);    -ms-filter: blur(5px);    filter: blur(5px);    pointer-events:none;}</style>');
     //add the morty bubble stuff
     $("#morty-head").after(
