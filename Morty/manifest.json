@@ -29,8 +29,7 @@
   "content_scripts": [
     {
       "matches": ["https://*.realtor.ca/Residential/*"],
-      //"exclude_matches": [""],
-      "js": ["morty.js"]
+      "js": ["jquery.js", "morty.js"]
     },
     {
       "matches": ["https://tools.td.com/mortgage-affordability-calculator/*"],
