@@ -52,7 +52,7 @@ window.onload = function() {
 function loadMorty(){
     var icon_url = chrome.extension.getURL("/icons/morty48.png");
     $("#morty_anchor").append('<img id="morty-head" src="' + icon_url + '" alt="MORTY_FACE" style="height:48px; width:48px">');
-    $("head").append('<style>#morty-bubble td:hover{cursor:pointer;}#morty-head:hover{cursor:pointer;}#morty-bubble{position:absolute;overflow:hidden;transition: height linear 0.25s;height:0px;width:225px;background-color:skyblue;}#morty-response{    padding:10px;    position:absolute;    font-size:20px;}#morty-clickable-table{    position:absolute;}#morty-ok-continue{    cursor:pointer;}.morty-blurred{    -webkit-filter: blur(5px);    -moz-filter: blur(5px);    -o-filter: blur(5px);    -ms-filter: blur(5px);    filter: blur(5px);    pointer-events:none;}</style>');
+    $("head").append('<style>#morty-bubble td:hover{cursor:pointer;}#morty-head:hover{cursor:pointer;}#morty-bubble{border-radius:5px; position:absolute;overflow:hidden;transition: height linear 0.25s;height:0px;width:225px;background-color:skyblue;}#morty-response{    padding:10px;    position:absolute;    font-size:20px;}#morty-clickable-table{    position:absolute;}#morty-ok-continue{    cursor:pointer;}.morty-blurred{    -webkit-filter: blur(5px);    -moz-filter: blur(5px);    -o-filter: blur(5px);    -ms-filter: blur(5px);    filter: blur(5px);    pointer-events:none;}</style>');
     //add the morty bubble stuff
     $("#morty-head").after(
         '<div id="morty-bubble">' +
@@ -114,9 +114,9 @@ function loadMorty(){
     })
     $("#morty-head").click(function(){
         if(morty_open) $("#morty-bubble").css("height", "0px");
-        else $("#morty-bubble").css("height", "580px");
+        else $("#morty-bubble").css("height", "500px");
         morty_open = !morty_open;
-    })
+    })  
     $(document).click(function(event){
         if($(event.target).closest("#morty-bubble")[0] == null && morty_open && $(event.target).closest("#morty-head")[0] == null){
             $("#morty-bubble").css("height", "0px");

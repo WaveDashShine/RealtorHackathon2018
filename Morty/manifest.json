@@ -35,5 +35,8 @@
       "matches": ["https://tools.td.com/mortgage-affordability-calculator/*"],
       "js": ["td.js"]
     }
+  ],
+  "web_accessible_resources": [
+    "icons/*.png"
   ]
 }
